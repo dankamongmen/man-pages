@@ -139,29 +139,28 @@ T}
 ESC 8	DECRC	T{
 Restore state most recently saved by ESC 7.
 T}
-ESC [	CSI	Control sequence introducer
 ESC %		Start sequence selecting character set
 ESC % @		\0\0\0Select default (ISO 646 / ISO 8859-1)
 ESC % G		\0\0\0Select UTF-8
 ESC % 8		\0\0\0Select UTF-8 (obsolete)
 ESC # 8	DECALN	T{
-DEC screen alignment test \- fill screen with E's
+DEC screen alignment test \- fill screen with E's.
 T}
 ESC (		T{
 Start sequence defining G0 character set
 (followed by one of B, 0, U, K, as below)
 T}
 ESC ( B		T{
-Select default (ISO 8859-1 mapping)
+Select default (ISO 8859-1 mapping).
 T}
 ESC ( 0		T{
-Select VT100 graphics mapping
+Select VT100 graphics mapping.
 T}
 ESC ( U		T{
-Select null mapping \- straight to character ROM
+Select null mapping \- straight to character ROM.
 T}
 ESC ( K		T{
-Select user mapping \- the map that is loaded by the utility \fBmapscrn\fP(8)
+Select user mapping \- the map that is loaded by the utility \fBmapscrn\fP(8).
 T}
 ESC )		T{
 Start sequence defining G1 (followed by one of B, 0, U, K, as above).
@@ -169,12 +168,13 @@ T}
 ESC >	DECPNM	Set numeric keypad mode
 ESC =	DECPAM	Set application keypad mode
 ESC ]	OSC	T{
-(Should be: Operating system command)
-ESC ] P \fInrrggbb\fP: set palette, with parameter
-given in 7 hexadecimal digits after the final P :-(.
-Here \fIn\fP is the color (0\(en15), and \fIrrggbb\fP indicates
+Operating System Command prefix.
+T}
+ESC ] R		Reset palette.
+ESC ] P		T{
+Set palette, with parameter given in 7 hexadecimal digits \fInrrggbb\fP after
+the final P. Here \fIn\fP is the color (0\(en15), and \fIrrggbb\fP indicates
 the red/green/blue values (0\(en255).
-ESC ] R: reset palette
 T}
 .TE
 .ad
